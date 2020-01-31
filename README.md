@@ -21,8 +21,8 @@ Inovbox is a digital signage player. It is based on Raspberry Pi and on other mi
 ## What’s In This Document
 
 - [Get Up and Running](#-get-up-and-running)
-- [Structure of the App](#-structure-of-the-app)
-- [You Must Know](#-you-must-now)
+- [Directory Structure](#-directory-structure)
+- [You Must Know](#-you-must-know)
 - [Process](#process)
 - [Connect Through SSH](#-connect-through-ssh)
 - [Copy Files and Directories](#-copy-files-and-directories-between-your-local-file-and-a-box-via-scp)
