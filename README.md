@@ -161,7 +161,7 @@ If the name of your card is different you need to update the functions ```genera
 ### Reboot
 Inovbox reboot automatically every 8 hours. You can change the setting inside ```.bash_profile```
 
-## 🎛️ Process
+## 🎛️Process
 
 ### Initialization :
 	- Read mac address
