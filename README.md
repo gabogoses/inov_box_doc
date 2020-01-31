@@ -82,7 +82,7 @@ Inovbox is a digital signage player. It is based on Raspberry Pi and on other mi
 Reboot the box thanks to  ```sudo reboot``` and Inovbox V2 is now running.
 At this point, you’ve got a fully functional Inovbox app.
 
-## ⚙️ Directory Structure
+## ⚙️Directory Structure
 
 ```
 +-- assets/ 
