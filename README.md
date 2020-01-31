@@ -26,8 +26,8 @@ Inovbox is a digital signage player. It is based on Raspberry Pi and on other mi
 - [Process](#process)
 - [Connect Through SSH](#-connect-through-ssh)
 - [Copy Files and Directories](#-copy-files-and-directories-between-your-local-file-and-a-box-via-scp)
-- [Create ISO From Inovbox](#-create-iso-from-inovbox)
-- [Duplicate Inovbox with ISO and SD Card](#-duplicate-inovbox-with-iso-and-sd-card)
+- [Create ISO From Inovbox](#create-iso-from-inovbox)
+- [Duplicate Inovbox with ISO and SD Card](#duplicate-inovbox-with-iso-and-sd-card)
 - [Troubleshoot](#troubleshoot)
 
 
