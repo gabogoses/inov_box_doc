@@ -24,17 +24,16 @@ Inovbox is a digital signage player. It is based on Raspberry Pi and on other mi
 - [Structure of the App](#-structure-of-the-app)
 - [You Must Know](#-you-must-now)
 - [Connect Through SSH](#-connect-through-ssh)
-- [Troubleshoot](#-troubleshoot)
 - [Copy Files and Directories](#-copy-files-and-directories-between-your-local-file-and-a-box-via-scp)
 - [Create ISO From Inovbox](#-create-iso-from-inovbox)
 - [Duplicate Inovbox with ISO and SD Card](#-duplicate-inovbox-with-iso-and-sd-card)
+- [Troubleshoot](#-troubleshoot)
 
 ## The App is Built on the Following Stack
 
-- [Node.js](https://nodejs.org/en/)
-- [Next.js](https://nextjs.org/)
-- [Python](https://www.python.org/)
-- [Pygame](https://www.pygame.org/wiki/GettingStarted)
+- [Node.js](https://nodejs.org/en/) All the logic used Node.js that allows server-side execution of JavaScript code.
+- [Next.js](https://nextjs.org/) React.js frameword used to connect the box to a wifi access
+- [Python](https://www.python.org/) & [Pygame](https://www.pygame.org/wiki/GettingStarted) are used to manage the setup screen (showing mac address, ssid, password)
 
 
 ## 🚀 Get Up and Running
@@ -79,7 +78,7 @@ Inovbox is a digital signage player. It is based on Raspberry Pi and on other mi
 
 
 Reboot the box thanks to  ```sudo reboot``` and Inovbox V2 is now running.
-  At this point, you’ve got a fully functional Inovbox app.
+At this point, you’ve got a fully functional Inovbox app.
 
 ## ⚙️ Directory Structure
 
@@ -160,6 +159,23 @@ If the name of your card is different you need to update the functions ```genera
 ### Reboot
 Inovbox reboot automatically every 8 hours. You can change the setting inside ```.bash_profile```
 
+## 🎛️ Process
+
+### Initialization :
+	- Read mac address
+	- Read sequence
+	- Read config file
+	- wifi test connection
+### After Initialization :
+	- Generate SSID and password for hotspot mode
+		CASE 1 - The box is connected to internet:
+				case 1 - The box has a sequence and connects to the server
+				=> The box will download the files of the playlist from inovhub. When the files are downloaded it will start playing
+				case 2 - The box does not have sequence and it will show the MAC Address
+		CASE 2 - The box isn't connected to internet:
+				case 1 - The box has a sequence and it will play it
+				case 2 - The box do not have sequence and it will show the hotspot screen to connect it to internet
+
 
 ## 🔑 Connect Through SSH
 Make sure your box is properly set up and connected.
@@ -189,9 +205,10 @@ scp -r /local/directory remote_username@box-ip-address:/remote/directory
 You will be asked to enter the user password.
 
 ##  📦 Create ISO From Inovbox
-1. Open terminal on the box
-2. Type ```lsblk``` to know your disk name
-3. Use the following command ```sudo dd bs=1024 if=path/of/your/image.img of=/path/to/save.img```
+1. Open terminal
+2. For Linux type ```lsblk``` to know your disk name. For mac type ```diskutil list```
+3. Use the following command ```sudo dd bs=1024 if=path/of/your/disk of=/path/to/save.img```
+example : ```sudo dd bs=1024 if=/dev/sdb/ of=/home/user/document/inovbox.iso```
  
 ##  💾 Duplicate Inovbox with ISO and SD Card
 1. Get the complete Inovbox ISO image.
