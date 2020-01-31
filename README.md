@@ -25,9 +25,9 @@ Inovbox is a digital signage player. It is based on Raspberry Pi and on other mi
 - [You Must Know](#-you-must-know)
 - [Process](#process)
 - [Connect Through SSH](#-connect-through-ssh)
-- [Copy Files and Directories](#-copy-files-and-directories-between-your-local-file-and-a-box-via-scp)
-- [Create ISO From Inovbox](#create-iso-from-inovbox)
-- [Duplicate Inovbox with ISO and SD Card](#duplicate-inovbox-with-iso-and-sd-card)
+- [Copy Files and Directories](#-copy-files-and-directories)
+- [Create ISO From Inovbox](#-create-iso-from-inovbox)
+- [Duplicate Inovbox with ISO and SD Card](#-duplicate-inovbox-with-iso-and-sd-card)
 - [Troubleshoot](#troubleshoot)
 
 
@@ -195,7 +195,7 @@ ssh username@ip-address
 
 The box will require a password which is by default the user password.
 
-## ✂️ Copy Files and Directories Between your Local File and a Box via SCP
+## Copy Files and Directories
 To copy a file from a local to a remote system run the following command:
 ```shell
 scp file.txt remote_username@box-ip-address:/remote/directory
@@ -206,7 +206,7 @@ scp -r /local/directory remote_username@box-ip-address:/remote/directory
 ```
 You will be asked to enter the user password.
 
-##  📦 Create ISO From Inovbox
+##  📦  Create ISO From Inovbox
 1. Open terminal
 2. For Linux type ```lsblk``` to know your disk name. For mac type ```diskutil list```
 3. Use the following command ```sudo dd bs=1024 if=path/of/your/disk of=/path/to/save.img```
